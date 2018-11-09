@@ -1,10 +1,11 @@
 import requests
 import json
-from utils import getData
+from utils import getData,processEtsy
 from config import ACCESS_TOKEN, CLIENT_ID
 
 url = "https://chitchats.com/api/v1/clients/"+CLIENT_ID+"/shipments"
 headers = {"Authorization": ACCESS_TOKEN,"Content-Type":"application/json"}
+processEtsy()
 datas = getData()
 
 for row in datas:
